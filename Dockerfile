@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN sudo ifconfig eth0 mtu 1450
+RUN ifconfig eth0 mtu 1450
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "app.py"]
