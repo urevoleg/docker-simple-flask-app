@@ -9,7 +9,7 @@ app = Flask(__name__)
 BASE_FOLDER = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_DIR = os.path.join(BASE_FOLDER, "resource")
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def hello_world():
     print(request.args)
     with open(os.path.join(RESOURCE_DIR, "responce.json")) as f:
