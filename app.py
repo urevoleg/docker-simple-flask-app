@@ -10,6 +10,7 @@ RESOURCE_DIR = os.path.join(BASE_FOLDER, "resource")
 
 @app.route('/')
 def hello_world():
+    print(request.args)
     with open(os.path.join(RESOURCE_DIR, "responce.json")) as f:
         return f"{json.loads(f.read()).get('payload')} - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 
