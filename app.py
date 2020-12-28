@@ -15,4 +15,4 @@ def hello_world():
         return f"{json.loads(f.read()).get('payload')} - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(host="0.0.0.0", port=9876, debug=True)
